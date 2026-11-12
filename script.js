@@ -2,21 +2,29 @@ const convertButton = document.querySelector(".convert-button")
 const currencySelect = document.querySelector(".currency-select-converted")
 const currencySelect2 = document.querySelector(".currency-select-to-convert")
 
-function convertValues() {
+async function convertValues() {
+    
     const inputCurrencyValue = document.querySelector(".input-currency").value
     const currencyValueToConvert = document.querySelector(".currency-value-to-convert")
     const currencyValueConverted = document.querySelector(".currency-value")
 
     console.log(currencySelect.value)
 
-    const dolarToday = 5.2
-    const euroToday = 6.2
-    const libraToday = 4
-    const bitcoinToday = 1000
+    try {
+        
+    // Busca todas as cotações em relação ao Real (BRL) de uma só vez
+    const url = "https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,GBP-BRL,BTC-BRL"
+    const response = await fetch(url)
+    const data = await response.json()
 
-    // resultado conversão Real para demais moedas
+    // Atualiza as variáveis com os valores reais de mercado (bid)
+    const dolarToday = parseFloat(data.USDBRL.bid)
+    const euroToday = parseFloat(data.EURBRL.bid)
+    const libraToday = parseFloat(data.GBPBRL.bid)
+    const bitcoinToday = parseFloat(data.BTCBRL.bid)
 
 
+        // resultado conversão Real para demais moedas
     if (currencySelect2.value == "Real" && currencySelect.value == "Real") {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(inputCurrencyValue)
     }
@@ -128,6 +136,13 @@ function convertValues() {
             style: "currency", currency: "BTC" 
         }).format(inputCurrencyValue)
     }
+    }
+    catch (error) {
+        alert("Erro ao buscar as cotações em tempo real. Verifique sua conexão.")
+        console.error(error)}
+    
+
+    
 
 }
 
