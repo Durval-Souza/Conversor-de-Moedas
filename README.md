@@ -7,6 +7,6 @@
 
 <a href="https://durval-souza.github.io/Conversor-de-Moedas/" target="_blank">Conversor de moedas </a>
 
-<img width="600" height="400" alt="Monitor com Conversor de Moedas" src="https://github.com/user-attachments/assets/ea78e0f0-eac7-4262-a273-00e4ed415c33" /> <img width="600" height="400" alt="Monitor com Conversor de Moedas em Roxo" src="https://github.com/user-attachments/assets/63f2248c-0f39-4bcc-b389-c7ce0922d19c" /> <img width="300" height="400" alt="Conversor de Moedas Roxo no Smartphone" src="https://github.com/user-attachments/assets/2774f0ea-88d1-4f52-a18f-ee64f0c20724" />
+<img width="600" height="400" alt="Monitor com Conversor de Moedas em Roxo" src="https://github.com/user-attachments/assets/63f2248c-0f39-4bcc-b389-c7ce0922d19c" /> <img width="300" height="400" alt="Conversor de Moedas Roxo no Smartphone" src="https://github.com/user-attachments/assets/2774f0ea-88d1-4f52-a18f-ee64f0c20724" />
 
 
