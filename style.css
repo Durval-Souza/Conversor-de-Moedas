@@ -135,3 +135,14 @@ section {
     font-size: 20px;
     font-weight: 700;
 }
+
+@media screen and (max-width: 500px) {
+
+    .logo-image {
+        width: 90%;
+    }
+
+    main {
+        width: 90%;
+    }
+}
